@@ -1,8 +1,7 @@
-import Example from "./components/Example.vue";
-import Layout from "./components/Layout.vue";
-import Index  from "./components/Index.vue";
+import Index from "./views/Index.vue";
+import SignUpView from "./views/SignUpPage";
+import SignInPage from "./views/SignInPage";
 
-import before from "./utils/before.js";
 
 const routes = [
     {
@@ -12,21 +11,17 @@ const routes = [
         meta: {}
     },
     {
-        path: "/authorized/",
-        component: Layout,
-        name: "examplePage",
-        beforeEnter: before,
-        meta: {},
-        children: [
-            {
-                path: "example",
-                component: Example,
-                name: "examplePage",
-                meta: {}
-            }
-            // authorized paths go here
-        ]
-    }
+        path: "/signup",
+        component: SignUpView,
+        name: "signupPage",
+        meta: {}
+    },
+        {
+        path: "/signin",
+        component: SignInPage,
+        name: "signinPage",
+        meta: {}
+    },
 ];
 
 export default routes;

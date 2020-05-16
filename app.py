@@ -11,12 +11,12 @@ app = Flask(__name__,
 app.config.from_object(Config)
 
 # Database init
-db = Database("db.db")
-db.create_tables()
+# db = Database("db.db")
+# db.create_tables()
 
 # DO NOT DELETE OR MOVE ON TOP
 # import routes
-from routes.User import *
+# from routes.User import *
 
 
 # frontend index page
