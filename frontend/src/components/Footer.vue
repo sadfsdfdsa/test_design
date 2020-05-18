@@ -11,7 +11,7 @@
                 <b-button size="md" pill class="bg-pink border-0">Contact.</b-button>
             </b-col>
         </b-row>
-        <b-row class="text-left color-gray-font mb-2">
+        <b-row class="text-left color-gray-font">
             <b-col>
                 © Artem Shuvaev 2020
             </b-col>

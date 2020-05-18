@@ -59,6 +59,16 @@ a:link {
     border-radius: 25px;
 }
 
+.border-radius-left {
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.border-radius-right {
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
 .color-blue-font {
     color: darkblue;
 }
@@ -130,23 +140,4 @@ a:link {
     background-color: white;
     color: black;
     border: 1px solid black;
-}
-
-/*.btn-black-invert:active {*/
-/*box-shadow: 0 15px 6px -6px #ccc !important;*/
-/*}*/
-
-/*.btn-black-invert:focus {*/
-/*box-shadow: 0 15px 6px -6px gray !important;*/
-/*color: white !important;*/
-/*background-color: black !important;*/
-/*}*/
-
-.circle{
-
-}
-
-.circle:hover {
-    margin-left: 20px;
-
 }

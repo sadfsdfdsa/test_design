@@ -1,6 +1,7 @@
 import Index from "./views/Index.vue";
 import SignUpView from "./views/SignUpPage";
 import SignInPage from "./views/SignInPage";
+import Test from "./views/Test";
 
 
 const routes = [
@@ -16,10 +17,16 @@ const routes = [
         name: "signupPage",
         meta: {}
     },
-        {
+    {
         path: "/signin",
         component: SignInPage,
         name: "signinPage",
+        meta: {}
+    },
+    {
+        path: "/test",
+        component: Test,
+        name: "testPage",
         meta: {}
     },
 ];

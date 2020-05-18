@@ -13,7 +13,7 @@
                                                 <span class="brand-animation-pink">On</span>|<span
                                                     class="brand-animation-blue">Testing</span></router-link>
                                         </div>
-                                        <span class="badge badge-warning" style="vertical-align: top">Beta</span>
+                                        <!--                                        <span class="badge badge-warning" style="vertical-align: top">Beta</span>-->
                                     </b-col>
                                     <b-col class="text-right" cols="2">
                                         <b-navbar-toggle target="nav-text-collapse"
@@ -37,7 +37,7 @@
                                         <router-link to="/" tag="div">Blog.</router-link>
                                     </div>
                                     <div class="navbar-item mr-4">
-                                        <router-link to="/" tag="div">FAQ.</router-link>
+                                        <router-link to="/test" tag="div">TEST.</router-link>
                                     </div>
                                     <div class="navbar-item mr-4">
                                         <router-link to="/signin" tag="b-button"
