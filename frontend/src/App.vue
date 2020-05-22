@@ -1,6 +1,6 @@
 <template>
     <div>
-        <router-view style="background-color: #f4f7f6; min-height: 100vh"></router-view>
+        <router-view style="min-height: 100vh"></router-view>
         <vue-snotify></vue-snotify>
     </div>
 </template>

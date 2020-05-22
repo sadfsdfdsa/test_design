@@ -9,7 +9,7 @@ a:link {
 }
 
 .margin-nav {
-    margin-top: 80px;
+    margin-top: 75px;
 }
 
 .active_bottom_shadow:hover {
@@ -23,6 +23,11 @@ a:link {
     background: rgb(3, 69, 138);
     background: linear-gradient(90deg, rgba(3, 69, 138, 1) 0%, rgba(9, 126, 233, 1) 100%);
     color: white;
+}
+
+.bg-black {
+    color: white;
+    background-color: black;
 }
 
 .bg-blue:hover {
@@ -101,12 +106,13 @@ a:link {
     color: black;
     font-family: 'Montserrat', sans-serif;
     box-shadow: none;
+    font-size: 1.1em;
 }
 
 .h-font {
     font-family: 'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', monospace;
     font-weight: 700;
-    font-size: 1.4em;
+    font-size: 1.5em;
     letter-spacing: 3px;
 }
 
@@ -140,4 +146,22 @@ a:link {
     background-color: white;
     color: black;
     border: 1px solid black;
+}
+
+.banner-section {
+    background-image: url(https://static.pexels.com/photos/373912/pexels-photo-373912.jpeg);
+    background-size: cover;
+    height: 380px;
+    left: 0;
+    top: 0;
+    background-position: 0;
+}
+
+.banner-section-1 {
+    background-image: url(https://images.dailyhive.com/20200108125811/shutterstock_1531447955.jpg);
+    background-size: cover;
+    height: 380px;
+    left: 0;
+    top: 0;
+    background-position: 0;
 }
