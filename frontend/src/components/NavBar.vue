@@ -17,7 +17,7 @@
                                 <b-col class="text-right" cols="2">
                                     <b-navbar-toggle target="nav-text-collapse"
                                                      class="d-lg-none text-right border-0 bg-white">
-                                        <img src="../assets/Hamburger_icon.svg">
+                                        <img src="../../../../lectures_hse/frontend/src/assets/Hamburger_icon.svg">
                                     </b-navbar-toggle>
                                 </b-col>
                             </b-row>
