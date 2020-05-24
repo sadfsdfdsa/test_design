@@ -25,11 +25,11 @@
                         <b-col class="text-uppercase" lg="4">
                             <b-collapse id="nav-text-collapse" is-nav>
                                 <div class="mr-4">
-                                    <a href="https://hse-onlecture.herokuapp.com/" target="_blank"><span
+                                    <a href="https://hse-onlecture.herokuapp.com/"><span
                                             class="navbar-item">Dashboard</span></a>
                                 </div>
                                 <div class="mr-4">
-                                    <a href="https://hse-onlecture.herokuapp.com/tasks" target="_blank"><span
+                                    <a href="https://hse-onlecture.herokuapp.com/tasks"><span
                                             class="navbar-item">Tasks</span></a>
                                 </div>
                                 <div class="mr-4">
