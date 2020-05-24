@@ -74,6 +74,10 @@ a:link {
     border-top-right-radius: 25px;
 }
 
+.border-radius-none {
+    border-radius: 0;
+}
+
 .color-blue-font {
     color: darkblue;
 }
@@ -109,6 +113,12 @@ a:link {
     font-size: 1.1em;
 }
 
+.navbar-item-font {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
+}
+
 .h-font {
     font-family: 'Consolas', 'Monaco', 'Bitstream Vera Sans Mono', monospace;
     font-weight: 700;
@@ -122,13 +132,14 @@ a:link {
 
 .navbar-item:hover {
     cursor: pointer;
-    color: #cccccc;
+    box-shadow: 0px 2px 0px 0px black !important;
+
 }
 
 .btn-black {
     color: black;
     border: 1px solid black;
-    background-color: white;
+    background-color: transparent;
 }
 
 .btn-black:hover {
@@ -143,9 +154,21 @@ a:link {
 }
 
 .btn-black-invert:hover {
-    background-color: white;
+    background-color: transparent;
     color: black;
     border: 1px solid black;
+}
+
+.btn-black:focus {
+    box-shadow: none !important;
+}
+
+.btn-black-invert:focus {
+    box-shadow: none !important;
+}
+
+.bg-yellow {
+    background-color: #ffdf7e;
 }
 
 .banner-section {
@@ -164,4 +187,37 @@ a:link {
     left: 0;
     top: 0;
     background-position: 0;
+}
+
+.banner-section-2 {
+    background-color: #ffdf7e;
+    background-size: cover;
+    height: 250px;
+    left: 0;
+    top: 0;
+    background-position: 0;
+}
+
+.input-underline {
+    box-shadow: 0px 2px 0px 0px #aaaaaa !important;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.input-underline:focus {
+    background-color: transparent;
+    outline: none !important;
+    border: none !important;
+    box-shadow: 0px 2px 0px 0px black !important;
+    border-radius: 0;
+}
+
+.input-underline:focus::placeholder {
+    color: black !important;
+}
+
+.test::before {
+    position: absolute;
+    -webkit-filter: drop-shadow(7px -7px 5px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(7px -7px 5px rgba(0, 0, 0, 0.5));
 }

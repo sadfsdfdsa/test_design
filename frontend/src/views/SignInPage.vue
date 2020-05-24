@@ -11,7 +11,7 @@
                     <b-row class="text-center" align-h="center">
                         <b-col class="text-center" sm="10">
                             <b-input-group class="mt-3">
-                                <b-form-input class="border-radius border-0"
+                                <b-form-input class=" border-0 input-underline" autofocus
                                               placeholder="Enter your email address"></b-form-input>
                             </b-input-group>
                         </b-col>
@@ -19,14 +19,12 @@
                     <b-row class="text-center" align-h="center">
                         <b-col class="text-center" sm="10">
                             <b-input-group class="mt-3">
-                                <b-form-input class="border-radius border-0"
+                                <b-form-input class=" border-0 input-underline"
                                               placeholder="Enter a password" type="password"></b-form-input>
                             </b-input-group>
                         </b-col>
                     </b-row>
-
-                    <hr>
-                    <b-row class="text-center" align-h="center">
+                    <b-row class="text-center mt-2" align-h="center">
                         <b-col class="text-center mt-3" sm="6">
                             <b-form-checkbox
                                     id="checkbox-1"
@@ -38,7 +36,7 @@
                             </b-form-checkbox>
                         </b-col>
                         <b-col class="text-center mt-3" sm="6">
-                            <b-button size="lg" pill class="border-0 bg-pink active_bottom_shadow">Sign In
+                            <b-button size="md" pill class="border-0 btn-black active_bottom_shadow">Sign In
                             </b-button>
                         </b-col>
                     </b-row>
@@ -60,7 +58,7 @@
 
     export default {
         name: "SignIn",
-        components: { NavBar}
+        components: {NavBar}
     }
 </script>
 
