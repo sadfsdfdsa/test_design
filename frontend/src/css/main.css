@@ -13,9 +13,9 @@ a:link {
 }
 
 .active_bottom_shadow:hover {
-    -webkit-box-shadow: 0 12px 12px -6px #ccc;
-    -moz-box-shadow: 0 12px 12px -6px #ccc;
-    box-shadow: 0 12px 12px -6px #ccc;
+    -webkit-box-shadow: 0 12px 12px -6px #ccc !important;
+    -moz-box-shadow: 0 12px 12px -6px #ccc !important;
+    box-shadow: 0 12px 12px -6px #ccc !important;
 }
 
 
@@ -190,9 +190,9 @@ a:link {
 }
 
 .banner-section-2 {
-    background-color: #ffdf7e;
+    background-image: url(https://images8.alphacoders.com/879/879694.jpg);
     background-size: cover;
-    height: 250px;
+    height: 380px;
     left: 0;
     top: 0;
     background-position: 0;
@@ -216,8 +216,7 @@ a:link {
     color: black !important;
 }
 
-.test::before {
-    position: absolute;
-    -webkit-filter: drop-shadow(7px -7px 5px rgba(0, 0, 0, 0.5));
-    filter: drop-shadow(7px -7px 5px rgba(0, 0, 0, 0.5));
+
+.left-hover-border:hover {
+    border-left: 3px solid !important;
 }

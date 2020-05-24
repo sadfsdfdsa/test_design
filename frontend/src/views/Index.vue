@@ -1,7 +1,7 @@
 <template>
-    <!--    <div id="main" style="background-color: #f4f7f6;">-->
+    <!--    <div id="main" style="background-color: #f4f7f6; min-height: 100vh;">-->
     <div id="main">
-        <NavBar></NavBar>
+<!--        <NavBar></NavBar>-->
         <b-container fluid>
             <b-row>
                 <b-col class="text-center banner-section">
@@ -76,74 +76,71 @@
                 </b-col>
             </b-row>
 
-<!--            <b-row class="mt-4" align-h="center">-->
-<!--                <b-col class="text-center banner-section-2" sm="8">-->
-<!--                    <div style="color: black;" class="margin-nav">-->
-<!--                        <h1 style="font-size: 6em">Projects</h1>-->
-<!--                        <div style="font-size: 2em">HSE | 24.05.20</div>-->
-<!--                    </div>-->
-<!--                </b-col>-->
-<!--            </b-row>-->
-<!--            <b-row align-h="center" class="mt-2">-->
-<!--                <b-col sm="4">-->
-<!--                    <b-card no-body class="overflow-hidden border-radius-none  bottom_shadow "-->
-<!--                            style="max-width: 540px;">-->
-<!--                        <b-row no-gutters>-->
-<!--                            <b-col md="6">-->
-<!--                                <b-card-body title="Horizontal Card">-->
-<!--                                    <b-card-text>-->
-<!--                                        This is a wider card with supporting text as a natural lead-in to additional-->
-<!--                                        content.-->
-<!--                                        This content is a little bit longer.-->
-<!--                                    </b-card-text>-->
-<!--                                </b-card-body>-->
-<!--                            </b-col>-->
-<!--                            <b-col md="6">-->
-<!--                                <b-card-img src="https://picsum.photos/400/400/?image=20" alt="Image"-->
-<!--                                            class="rounded-0"></b-card-img>-->
-<!--                            </b-col>-->
-<!--                        </b-row>-->
-<!--                    </b-card>-->
-<!--                </b-col>-->
-<!--                <b-col sm="4">-->
-<!--                    <b-card no-body class="overflow-hidden border-radius-none bottom_shadow "-->
-<!--                            style="max-width: 540px;">-->
-<!--                        <b-row no-gutters>-->
-<!--                            <b-col md="6">-->
-<!--                                <b-card-img src="https://picsum.photos/400/400/?image=20" alt="Image"-->
-<!--                                            class="rounded-0"></b-card-img>-->
-<!--                            </b-col>-->
-<!--                            <b-col md="6">-->
-<!--                                <b-card-body title="Horizontal Card">-->
-<!--                                    <b-card-text>-->
-<!--                                        This is a wider card with supporting text as a natural lead-in to additional-->
-<!--                                        content.-->
-<!--                                        This content is a little bit longer.-->
-<!--                                    </b-card-text>-->
-<!--                                </b-card-body>-->
-<!--                            </b-col>-->
-<!--                        </b-row>-->
-<!--                    </b-card>-->
-<!--                </b-col>-->
-<!--            </b-row>-->
+            <!--            <b-row class="mt-4" align-h="center">-->
+            <!--                <b-col class="text-center banner-section-2" sm="8">-->
+            <!--                    <div style="color: black;" class="margin-nav">-->
+            <!--                        <h1 style="font-size: 6em">Projects</h1>-->
+            <!--                        <div style="font-size: 2em">HSE | 24.05.20</div>-->
+            <!--                    </div>-->
+            <!--                </b-col>-->
+            <!--            </b-row>-->
+            <!--            <b-row align-h="center" class="mt-2">-->
+            <!--                <b-col sm="4">-->
+            <!--                    <b-card no-body class="overflow-hidden border-radius-none  bottom_shadow "-->
+            <!--                            style="max-width: 540px;">-->
+            <!--                        <b-row no-gutters>-->
+            <!--                            <b-col md="6">-->
+            <!--                                <b-card-body title="Horizontal Card">-->
+            <!--                                    <b-card-text>-->
+            <!--                                        This is a wider card with supporting text as a natural lead-in to additional-->
+            <!--                                        content.-->
+            <!--                                        This content is a little bit longer.-->
+            <!--                                    </b-card-text>-->
+            <!--                                </b-card-body>-->
+            <!--                            </b-col>-->
+            <!--                            <b-col md="6">-->
+            <!--                                <b-card-img src="https://picsum.photos/400/400/?image=20" alt="Image"-->
+            <!--                                            class="rounded-0"></b-card-img>-->
+            <!--                            </b-col>-->
+            <!--                        </b-row>-->
+            <!--                    </b-card>-->
+            <!--                </b-col>-->
+            <!--                <b-col sm="4">-->
+            <!--                    <b-card no-body class="overflow-hidden border-radius-none bottom_shadow "-->
+            <!--                            style="max-width: 540px;">-->
+            <!--                        <b-row no-gutters>-->
+            <!--                            <b-col md="6">-->
+            <!--                                <b-card-img src="https://picsum.photos/400/400/?image=20" alt="Image"-->
+            <!--                                            class="rounded-0"></b-card-img>-->
+            <!--                            </b-col>-->
+            <!--                            <b-col md="6">-->
+            <!--                                <b-card-body title="Horizontal Card">-->
+            <!--                                    <b-card-text>-->
+            <!--                                        This is a wider card with supporting text as a natural lead-in to additional-->
+            <!--                                        content.-->
+            <!--                                        This content is a little bit longer.-->
+            <!--                                    </b-card-text>-->
+            <!--                                </b-card-body>-->
+            <!--                            </b-col>-->
+            <!--                        </b-row>-->
+            <!--                    </b-card>-->
+            <!--                </b-col>-->
+            <!--            </b-row>-->
         </b-container>
         <Footer class="mt-5 mb-2"></footer>
     </div>
 </template>
 
 <script>
-    import note from "../assets/note_marketing.png";
-
-    import NavBar from "../components/NavBar";
     import Footer from "../components/Footer";
 
     export default {
-        components: {Footer, NavBar},
+        components: {Footer},
+        props: ['login'],
         data: () => ({
-            imgs: {
-                note_img: note
-            }
         }),
+        created() {
+        }
 
     }
 </script>

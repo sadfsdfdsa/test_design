@@ -1,6 +1,6 @@
 <template>
     <div id="main">
-        <NavBar></NavBar>
+        <!--        <NavBar></NavBar>-->
         <b-container class="margin-nav">
             <b-row class="mt-5"></b-row>
             <b-row class="text-center mt-5" align-h="center">
@@ -11,7 +11,15 @@
                     <b-row class="text-center" align-h="center">
                         <b-col class="text-center" sm="10">
                             <b-input-group class="mt-3">
-                                <b-form-input class="border-0 input-underline" v-model="input.email" autofocus trim blur
+                                <b-form-input class=" border-0 input-underline" v-model="input.username" autofocus trim
+                                              placeholder="Create username"></b-form-input>
+                            </b-input-group>
+                        </b-col>
+                    </b-row>
+                    <b-row class="text-center" align-h="center">
+                        <b-col class="text-center" sm="10">
+                            <b-input-group class="mt-3">
+                                <b-form-input class="border-0 input-underline" v-model="input.email" trim
                                               placeholder="Enter your email address"></b-form-input>
                             </b-input-group>
                         </b-col>
@@ -37,40 +45,38 @@
                     <b-row class="text-center mt-2" align-h="center" align-v="center">
                         <b-col class="text-center mt-3" sm="5">
                             <b-form-checkbox
+                                    class="check-box"
                                     id="checkbox-1"
                                     name="checkbox-1"
                                     :value="true"
                                     :unchecked-value="false"
-                                    :model="input.check_terms">
+                                    v-model="input.check_terms">
                                 Accept the terms and use
                             </b-form-checkbox>
                         </b-col>
                         <b-col class="text-center mt-3" sm="5">
-                            <b-button size="md" pill class="border-0 btn-black active_bottom_shadow">Create account
+                            <b-button size="md" pill class="border-0 btn-black-invert" @click="create_account">Create
+                                account
                             </b-button>
                         </b-col>
                     </b-row>
-                    <!--<b-row class="text-left" align-h="start">-->
-                    <!--<b-col class="text-left ml-5" sm="2">-->
-                    <!--<b-img src="https://cdn.auth0.com/blog/googleoauth/logo.png"-->
-                    <!--fluid center class="shadow border-radius active_bottom_shadow cursor"-->
-                    <!--alt="Responsive image"></b-img>-->
-                    <!--</b-col>-->
-                    <!--</b-row>-->
                 </b-col>
             </b-row>
         </b-container>
+        <Footer class="fixed-bottom"></Footer>
     </div>
 </template>
 
 <script>
-    import NavBar from "../components/NavBar";
+    import Footer from "../components/Footer";
 
     export default {
         name: "SignUpView",
-        components: {NavBar},
+        components: {Footer},
+        props: ['user'],
         data: () => ({
             input: {
+                username: "",
                 pass: "",
                 email: "",
                 pass_again: "",
@@ -78,6 +84,21 @@
                 show_pass_again: false
             }
         }),
+        methods: {
+            create_account() {
+                if (this.input.pass && this.input.email && this.input.pass === this.input.pass_again && this.input.check_terms) {
+                    let tmp = {
+                        name: this.input.username
+                    }
+                    this.$emit('do_login', tmp)
+                    this.$router.push({path: this.$route.query.redirect_to ? this.$route.query.redirect_to : '/account'})
+                    return;
+                }
+                this.$snotify.warning('Complete all fields please!')
+            }
+        },
+        created() {
+        }
     }
 </script>
 

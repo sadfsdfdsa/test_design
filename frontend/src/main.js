@@ -1,5 +1,4 @@
-
-import Snotify, { SnotifyPosition } from "vue-snotify";
+import Snotify, {SnotifyPosition} from "vue-snotify";
 import BootstrapVue from "bootstrap-vue";
 import VueRouter from "vue-router";
 import Vuex from "vuex";
@@ -26,8 +25,26 @@ Vue.use(Snotify, {
 Vue.prototype.$api = api;
 
 const store = new Vuex.Store({
-    state: {},
-    mutations: {}
+    state: {
+        login: false,
+        username: "",
+
+        LSV: {
+            login: "login",
+            username: "username"
+        }
+    },
+    mutations: {
+        set_login(state, login = false) {
+            state.login = login;
+            localStorage[state.LSV.login] = login;
+        },
+        set_username(state, username) {
+            state.username = username;
+            localStorage[state.LSV.username] = username;
+        }
+
+    }
 });
 
 const router = new VueRouter({

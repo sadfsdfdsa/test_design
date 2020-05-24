@@ -1,11 +1,11 @@
 <template>
     <b-container>
         <hr>
-        <b-row class="text-center font-size-14 color-blue-font">
-            <b-col cols="4">Tasks.</b-col>
-            <b-col cols="4">Dashboard.</b-col>
-            <b-col cols="4">Blog.</b-col>
-        </b-row>
+<!--        <b-row class="text-center font-size-14">-->
+<!--            <b-col cols="4">Tasks</b-col>-->
+<!--            <b-col cols="4">Dashboard</b-col>-->
+<!--            <b-col cols="4">Blog</b-col>-->
+<!--        </b-row>-->
         <b-row class="text-center mt-4">
             <b-col>
                 <b-button size="lg" pill class="btn-black border-0">Contact.</b-button>

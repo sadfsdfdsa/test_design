@@ -41,16 +41,22 @@
                                 <div class="mr-4 navbar-item-font" style="border-right: 2px solid #333;">
                                     &#8203;
                                 </div>
-                                <div class="mr-4">
+                                <div class="mr-4" v-if="!this.user.login">
                                     <router-link to="/signin" tag="b-button"
                                                  class="text-nowrap btn-black border-radius  border-0 active_bottom_shadow text-uppercase navbar-item-font">
                                         sign in
                                     </router-link>
                                 </div>
-                                <div class="mr-4">
+                                <div class="mr-4" v-if="!this.user.login">
                                     <router-link to="/signup" tag="b-button"
                                                  class="text-nowrap btn-black-invert border-0 border-radius text-uppercase navbar-item-font">
                                         sign up
+                                    </router-link>
+                                </div>
+                                <div class="mr-4" v-else>
+                                    <router-link to="/account" tag="div"
+                                                 class="text-nowrap navbar-item border-0 text-uppercase">
+                                        {{this.user.name}}
                                     </router-link>
                                 </div>
                             </b-collapse>
@@ -65,7 +71,7 @@
 <script>
     export default {
         name: "NavBar",
-        methods: {}
+        props: ['user']
     }
 </script>
 

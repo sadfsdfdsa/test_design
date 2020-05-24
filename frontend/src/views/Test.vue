@@ -1,6 +1,6 @@
 <template>
     <div id="main">
-        <NavBar></NavBar>
+<!--        <NavBar></NavBar>-->
         <div id="sub_main">
             <b-container class="margin-nav" style="position: absolute">
                 <b-row>
