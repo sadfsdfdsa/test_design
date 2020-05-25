@@ -162,6 +162,12 @@ a:link {
     box-shadow: none !important;
 }
 
+.non-focus:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
 .btn-black-invert:focus {
     box-shadow: none !important;
 }
