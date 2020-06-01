@@ -1,4 +1,8 @@
 from flask import Flask, render_template
+from flask_jwt_extended import JWTManager
+
+from flask_compress import Compress
+
 from database.database import Database
 from config.config import Config
 
@@ -9,20 +13,25 @@ app = Flask(__name__,
             template_folder='static')
 
 app.config.from_object(Config)
+app.config['JWT_SECRET_KEY'] = 'k45fll23l4tkvka'
+
+jwt = JWTManager(app)
+
+Compress(app)
 
 # Database init
-# db = Database("db.db")
-# db.create_tables()
-
-# DO NOT DELETE OR MOVE ON TOP
-# import routes
-# from routes.User import *
+db = Database()
 
 
 # frontend index page
 @app.route('/')
 def index():
     return render_template('index.html')
+
+
+# DO NOT DELETE OR MOVE ON TOP
+# import routes
+from routes.routes import *
 
 
 # give all to vue router

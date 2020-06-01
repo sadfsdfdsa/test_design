@@ -73,14 +73,20 @@
         methods: {
             login() {
                 if (this.input.pass && this.input.email) {
-                    let tmp = {
-                        name: "Artem Shuvaev"
-                    }
-                    this.$emit('do_login', tmp)
-                    this.$router.push({path: this.$route.query.redirect_to ? this.$route.query.redirect_to : '/'})
-                    return;
+                    this.$api.post("/login/", {password: this.input.pass, login: this.input.email}).then((data) => {
+                        if (data.data.result === "success") {
+                            this.$emit('do_login', data.data.data.user, {remember_flag: this.input.remember_flag})
+                            localStorage[this.$store.state.LSV.access_token] = data.data.data.access_token;
+                            localStorage[this.$store.state.LSV.refresh_token] = data.data.data.refresh_token;
+                            localStorage[this.$store.state.LSV.login] = 'true';
+                            this.$router.push({path: this.$route.query.redirect_to ? this.$route.query.redirect_to : '/'})
+                        } else {
+                            this.$snotify.error(data.data.error.msg);
+                        }
+                    });
+                } else {
+                    this.$snotify.warning('Complete all fields')
                 }
-                this.$snotify.warning('Complete all fields')
             }
         },
         created() {

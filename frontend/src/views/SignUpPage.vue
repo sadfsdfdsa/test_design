@@ -87,11 +87,17 @@
         methods: {
             create_account() {
                 if (this.input.pass && this.input.email && this.input.pass === this.input.pass_again && this.input.check_terms) {
-                    let tmp = {
-                        name: this.input.username
-                    }
-                    this.$emit('do_login', tmp)
-                    this.$router.push({path: this.$route.query.redirect_to ? this.$route.query.redirect_to : '/account'})
+                    this.$api.post("/signup/", {password: this.input.pass, email: this.input.email, username: this.input.username}).then((data) => {
+                        if (data.data.result === "success") {
+                            this.$emit('do_login', data.data.data.user, {remember_flag: this.input.remember_flag})
+                            localStorage[this.$store.state.LSV.access_token] = data.data.data.access_token;
+                            localStorage[this.$store.state.LSV.refresh_token] = data.data.data.refresh_token;
+                            localStorage[this.$store.state.LSV.login] = 'true';
+                            this.$router.push({path: this.$route.query.redirect_to ? this.$route.query.redirect_to : '/'})
+                        } else {
+                            this.$snotify.error(data.data.error.msg);
+                        }
+                    });
                     return;
                 }
                 this.$snotify.warning('Complete all fields please!')

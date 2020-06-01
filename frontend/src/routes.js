@@ -3,6 +3,7 @@ import SignUpView from "./views/SignUpPage";
 import SignInPage from "./views/SignInPage";
 import Test from "./views/Test";
 import AccountPage from "./views/AccountPage";
+import Platform from "./views/Platform";
 
 
 const routes = [
@@ -30,10 +31,16 @@ const routes = [
         name: "testPage",
         meta: {}
     },
-        {
+    {
         path: "/account",
         component: AccountPage,
         name: "accountPage",
+        meta: {}
+    },
+    {
+        path: "/platform",
+        component: Platform,
+        name: "platformPage",
         meta: {}
     },
 ];

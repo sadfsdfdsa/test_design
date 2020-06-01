@@ -31,7 +31,10 @@ const store = new Vuex.Store({
 
         LSV: {
             login: "login",
-            username: "username"
+            username: "username",
+            access_token: "access_token",
+            refresh_token: "refresh_token"
+
         }
     },
     mutations: {

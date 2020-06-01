@@ -35,7 +35,7 @@
                                     <router-link to="/" tag="div" class="navbar-item">Blog</router-link>
                                 </div>
                                 <div class="mr-4">
-                                    <router-link to="/test" tag="div" class="navbar-item">Test</router-link>
+                                    <router-link to="/platform" tag="div" class="navbar-item">Platform</router-link>
                                 </div>
                                 <div class="mr-4 navbar-item-font d-none d-lg-block"
                                      style="border-right: 2px solid #333;">

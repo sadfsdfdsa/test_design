@@ -107,14 +107,14 @@ a:link {
 }
 
 .navbar-item {
-    color: black;
+    color: black !important;
     font-family: 'Montserrat', sans-serif;
     box-shadow: none;
     font-size: 1.1em;
 }
 
 .navbar-item-font {
-    color: black;
+    color: black !important;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.1em;
 }

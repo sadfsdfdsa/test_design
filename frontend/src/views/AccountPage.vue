@@ -1,7 +1,7 @@
 <template>
     <!--     style="background-color: #f4f7f6; min-height: 100vh;"-->
     <div id="main">
-        <b-container fluid>
+        <b-container fluid v-if="this.user.login===true">
             <b-row>
                 <b-col class="text-center banner-section-2">
                     <div style="color: white;" class="margin-nav">
@@ -79,7 +79,7 @@
                                     Actions
                                 </b-col>
                             </b-row>
-                            <b-row no-gutters align-h="left">
+                            <b-row no-gutters>
                                 <b-col align-self="start">
                                     <b-button @click="unlogin" class="btn-black navbar-item-font">
                                         Sign out
@@ -114,9 +114,9 @@
             }
         },
         created() {
-            if (this.user.login === false) {
-                this.$router.push({path: '/signin', query: {redirect_to: "/account"}})
-            }
+            // if (this.user.login === false) {
+            //     this.$router.push({path: '/signin', query: {redirect_to: "/account"}})
+            // }
         }
 
     }
