@@ -12,7 +12,7 @@
             </b-row>
             <b-container>
                 <b-row class="mt-2">
-                    <b-col>
+                    <b-col cols="12" sm="6">
                         <b-card style="border-left: 3px solid dodgerblue;"
                                 class="border-radius-none shadow left-hover-border active_bottom_shadow">
                             <b-row>
@@ -27,51 +27,41 @@
                             </b-row>
                         </b-card>
                     </b-col>
-                    <b-col>
+                    <b-col cols="12" sm="6">
                         <b-card style="border-left: 3px solid mediumpurple;"
                                 class="border-radius-none shadow left-hover-border active_bottom_shadow">
                             <b-row no-gutters>
-                                <b-col sm="4">
+                                <b-col sm="12">
                                     <b-row>
                                         <b-col class="h-font">
                                             Service
                                         </b-col>
                                     </b-row>
                                     <b-row>
-                                        <b-col sm="10">
+                                        <b-col>
                                             <a href="https://hse-onlecture.herokuapp.com/tasks" target="_blank"><span
                                                     class="navbar-item">Tasks</span></a>
                                         </b-col>
+                                        <b-col>
+                                            <b-badge variant="success">Active</b-badge>
+                                        </b-col>
                                     </b-row>
                                     <b-row>
-                                        <b-col sm="10">
+                                        <b-col>
                                             <a href="https://hse-onlecture.herokuapp.com/" target="_blank"><span
                                                     class="navbar-item">Dashboard</span></a>
                                         </b-col>
-                                    </b-row>
-                                </b-col>
-                                <b-col sm="5" class="text-left">
-                                    <b-row>
-                                        <b-col class="h-font">Status</b-col>
-                                    </b-row>
-                                    <b-row>
                                         <b-col>
                                             <b-badge variant="success">Active</b-badge>
                                         </b-col>
                                     </b-row>
-                                    <b-row>
-                                        <b-col>
-                                            <b-badge variant="success">Active</b-badge>
-                                        </b-col>
-                                    </b-row>
-
                                 </b-col>
                             </b-row>
                         </b-card>
                     </b-col>
                 </b-row>
                 <b-row>
-                    <b-col sm="6">
+                    <b-col cols="12" sm="6">
                         <b-card style="border-left: 3px solid #aaaaaa;"
                                 class="border-radius-none shadow left-hover-border active_bottom_shadow">
                             <b-row>
